@@ -1,19 +1,30 @@
 <p id="notice"><%= notice %></p>
+<%= content_for :title do %>
+	<%= @anime.title %>
+<% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @anime.title %>
-</p>
+<div class="columns mt-6 is-centered">
+  	<div class="column is-one-third">
+    	<div class="panel-control">
 
-<p>
-  <strong>Grade:</strong>
-  <%= @anime.grade %>
-</p>
+			<div class="panel-control">
+			  <strong>Title:</strong>
+			  <%= @anime.title %>
+			</div>
 
-<p>
-  <strong>Resume:</strong>
-  <%= @anime.resume %>
-</p>
+			<div class="panel-control">
+			  <strong>Grade:</strong>
+			  <%= @anime.grade %>
+			</div>
+
+			<div class="panel-control">
+			  <strong>Resume:</strong>
+			  <%= @anime.resume %>
+			<div>
+		</div>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_anime_path(@anime) %> |
-<%= link_to 'Back', animes_path %>
+<%= link_to 'Back', animes_path %> |
+<%= link_to 'Destroy', @anime, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -16,11 +16,18 @@
 #table_attr {
 	height: 10em;
   	display: flex;
-  	align-items: center;
   	justify-content: center;
   	padding-top: 70px;
 }
 
+#_he {
+	margin-bottom: 40px;
+}
+
 #navbarMenuHeroA {
 	padding-top: 20px;
+}
+
+#tab {
+	width: 480px;
 }
