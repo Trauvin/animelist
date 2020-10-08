@@ -7,6 +7,7 @@ class AnimesController < ApplicationController
     @animes = Anime.all
     # lista todos as notas de forma decrescente
     @animes = Anime.order('grade DESC').all
+    @indice = Anime
   end
 
   # GET /animes/1
@@ -74,4 +75,11 @@ class AnimesController < ApplicationController
       params.require(:anime).permit(:title, :grade) #:resume
     end
 
+    def anime_indice
+      @animes.each do |anime|
+        for anime.grade in @animes
+          
+        end
+      end
+    end
 end
